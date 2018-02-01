@@ -3,6 +3,10 @@ Simple module to return a crypto-currency's name from symbol or vice-versa.
 
 This module uses a predefined lists of coins on the file `coins.json` which where taken from coinmarketcap.com
 
+### Install
+
+`npm install coinnames --save`
+
 ### API
 **options**
 -optional, accepts the value `lower`, default: `undefined`
