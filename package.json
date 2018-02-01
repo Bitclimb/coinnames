@@ -1,0 +1,33 @@
+{
+  "name": "coinnames",
+  "version": "1.0.0",
+  "description": "Simple module to return a crypto-currency's name from symbol or vice-versa.",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniibu/coinnames.git"
+  },
+  "keywords": [
+    "crypto",
+    "currency",
+    "names",
+    "crypto",
+    "symbols",
+    "crypto",
+    "names"
+  ],
+  "author": "unibtc@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uniibu/coinnames/issues"
+  },
+  "homepage": "https://github.com/uniibu/coinnames#readme"
+}
