@@ -2,12 +2,12 @@ const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const coinspath = `${__dirname}/coins.json`;
 let coins, coinsRev;
-async function checkAndUpdate () {
-  if (coins || coinsRev) {
+async function checkAndUpdate (force = false) {
+  if ((coins || coinsRev) && force === false) {
     return;
   }
   const exists = await fs.pathExists(coinspath);
-  if (!exists) {
+  if (!exists || force === true) {
     const coinlist = await fetch('https://api.coinmarketcap.com/v1/ticker/?limit=0');
     let coinlistjson = await coinlist.json();
     const coinlistobj = {};
@@ -68,6 +68,4 @@ function getSymbol (name, opts, cb) {
   }
 }
 
-getSymbol('bitcoin', 'lower').then(res => {
-  console.log(res);
-});
+module.exports = { getName, getSymbol, checkAndUpdate };

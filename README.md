@@ -1,12 +1,14 @@
 # coinnames
 Simple module to return a crypto-currency's name from symbol or vice-versa. 
 
-On initial run (will only happen once), this module will request coinmarketcap.com for the list of coins, and stores it 
-using `coins.json` filename on the same directory as this module is installed.
+On initial run (will only happen once unless checkAndUpdate is called with a `true` argument), this module will request coinmarketcap.com for the list of coins, and stores it using `coins.json` filename on the same directory as this module is installed.
 
 ### API
 **options**
 -optional, accepts the value `lower`, default: `undefined`
+
+**checkAndUpdate(true)**
+-forces a new update of the coin list from coinmarketcap
 
 **getName(symbol,opts,callback)**
 -gets the coin name from the specified `symbol`
